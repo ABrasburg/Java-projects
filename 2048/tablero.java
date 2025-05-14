@@ -15,6 +15,7 @@ public class Tablero {
                 tablero[i][j] = 0;
             }
         }
+        agregarNumero();
     }
 
     public void mostrarTablero() {
@@ -56,6 +57,7 @@ public class Tablero {
                 }
             }
         }
+        if (movimiento) agregarNumero();
         return movimiento;
     }
     public boolean moverDerecha() {
@@ -78,6 +80,7 @@ public class Tablero {
                 }
             }
         }
+        if (movimiento) agregarNumero();
         return movimiento;
     }
     public boolean moverArriba() {
@@ -100,6 +103,7 @@ public class Tablero {
                 }
             }
         }
+        if (movimiento) agregarNumero();
         return movimiento;
     }
     public boolean moverAbajo() {
@@ -122,6 +126,23 @@ public class Tablero {
                 }
             }
         }
+        if (movimiento) agregarNumero();
         return movimiento;
+    }
+    public boolean isGameOver() {
+        for (int i = 0; i < filas; i++) {
+            for (int j = 0; j < columnas; j++) {
+                if (tablero[i][j] == 0) {
+                    return false;
+                }
+                if (i < filas - 1 && tablero[i][j] == tablero[i + 1][j]) {
+                    return false;
+                }
+                if (j < columnas - 1 && tablero[i][j] == tablero[i][j + 1]) {
+                    return false;
+                }
+            }
+        }
+        return true;
     }
 }
