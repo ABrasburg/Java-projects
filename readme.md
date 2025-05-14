@@ -1,11 +1,5 @@
 2048 (versión en consola)
 
-Clases: Tablero, Juego2048, Movimiento.
-
-Desafíos: fusión de números, generación aleatoria, control de movimientos.
-
-Muestra: lógica, arrays bidimensionales, POO.
-
 Buscaminas
 
 Clases: Tablero, Celda, JuegoBuscaminas.
