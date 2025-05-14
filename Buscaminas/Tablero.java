@@ -71,6 +71,17 @@ public class Tablero {
         }
     }
 
+    public boolean estaGanado() {
+        for (int i = 0; i < tablero.length; i++) {
+            for (int j = 0; j < tablero[0].length; j++) {
+                if (tablero[i][j].estaEscondida() && !(tablero[i][j] instanceof Bomba)) {
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
+
     public void jugar(int x, int y) throws PosicionInvalida {
         if (x < 0 || x >= tablero.length || y < 0 || y >= tablero[0].length) {
             throw new PosicionInvalida();
