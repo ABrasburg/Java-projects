@@ -19,6 +19,10 @@ public class Celda {
         return this.escondida;
     }
 
+    public void agregarBomba() {
+        this.bombasVecinas++;
+    }
+
     @Override
     public String toString() {
         return escondida ? "[X]" : "[" + bombasVecinas + "]";
