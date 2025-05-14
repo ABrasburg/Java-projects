@@ -98,4 +98,16 @@ public class Tablero {
             
         }
     }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < tablero.length; i++) {
+            for (int j = 0; j < tablero[0].length; j++) {
+                sb.append(tablero[i][j].toString());
+            }
+            sb.append("\n");
+        }
+        return sb.toString();
+    }
 }
