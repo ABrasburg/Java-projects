@@ -1,4 +1,4 @@
-package Buscaminas.excepciones;
+package excepciones;
 
 public class AlreadySelected extends Exception {
     public AlreadySelected() {
